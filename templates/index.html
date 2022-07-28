@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+
+<center>
+    <br>
+    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Practica de Montecarlo</h1>
+    <hr>
+    <div class="card row mb-12">
+        <div class="col card-body">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="nav-link" href="/">
+                        <img src="{{ url_for('static', filename='uleam.png') }}" style="width: 250px; height:80px"
+                            class="card-img-top" alt="Grafica por fecha">
+                    </a>
+                    <a class="nav-link" href="#">
+                        <h3 class="card-title" align="center">Universidad Laica Eloy Alfaro de Manabi</h3><br/><br/>
+                        <h4 class="card-text" align="center">Facultad de Ciencias Informaticas</h4><br/>
+                    </a>
+                    <a class="nav-link" href="/">
+                        <img src="{{ url_for('static', filename='facci.jpg') }}" style="width: 250px; height:80px"
+                            class="card-img-top" alt="Grafica por fecha">
+                    </a>
+                </div>
+            </nav>
+            <h4 class="card-text" align="center">Tecnologias de la información</h4><br/>
+            <h4 class="card-text" align="center">Modelamiento y simulación</h4><br/>
+            <h4 class="card-text" align="center">Ing. Jorge Aníbal Moya Delgado</h4><br/>
+            <h4 class="card-text" align="center">Boris Leonel Loor Barreto</h4><br/>
+            <h4 class="card-text" align="center">Sexto Semestre</h4><br/>
+        </div>
+    </div>
+    <div class="card row mb-12">
+        <div class="col card-body">
+            <h3 class="card-title" style="font-size:20px;"><strong>Ejercicio 1</strong></h3>
+            <p class="card-text" align="justify" style="font-size: 18px;">
+                Tratando de determinar el número óptimo de autos comprar. El costo promedio anual de un auto es de $ 75.000. Además, está compañía ha recopilado las siguientes probabilidades de operación:
+            </p>
+            <image src="{{ url_for('static', filename='prob.jpg') }}" ></image>
+            <p class="card-text" align="justify" style="font-size: 18px;">
+                Si el alquiler diario por auto es de 700, el costo de no tener un auto disponible cuando se solicita es de  400  y el costo de tener un auto ocioso durante un día es de 100, ¿cuál es la cantidad de autos que debería comprar la compañía?  Asuma que un auto que se alquila está disponible al día siguiente.
+                Simule el sistema para un año de 360 días (para la evaluación 15 días de funcionamiento) y muestre un análisis de costos de los 15 días simulados.<br>
+            </p>
+        </div>
+        <a href="/montecarlo">
+            <button class="btn btn-info w-25 mx-auto ">
+                Solución
+            </button>
+        </a>
+        <br>
+    </div>
+</center>
+
+
+
+{% endblock %}

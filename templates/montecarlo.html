@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %} Montecarlo {% endblock %}
+{% block content %}
+<center>
+    <br>
+    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <strong>Resolución</strong>
+    </h2>
+    <br>
+</center>
+<h3>Tabla probabilidad mínima y máxima de Auto por día</h3>
+<p>En primer lugar tomamos los datos de las probabilidades del auto por dia y calculamos la probabilidad acumulada para de esta manera obetner la probabilidad mínima y máxima de cada auto</p>
+<br>
+<div class="card border-info mb-3">
+    {{data|safe}}
+</div>
+<h3>Tabla probabilidad mínima y máxima de Días por auto</h3>
+<p>En este apartado hacemos el mismo proceso anterior pero en este caso calculamos el mínimo y máximo para la cantidad de días que será alquilado el auto</p>
+<br>
+<div class="card cards">
+    <div class="card border-info mb-3">
+    {{data2|safe}}
+</div>
+<h3>Tabla búsqueda de probabilidades en los números aleatorios</h3>
+<p>Una vez tenemos las dos tablas anteriores con las probabilidades definidas, tomamos los números aleatorios dados por el ejercicio y calculamos la simulación generada y el valor que representa.</p>
+<br>
+<div class="card cards">
+    <div class="card border-info mb-3">
+    {{data3|safe}}
+</div>
+<h3>Tabla Simulación extendida para 6 automóviles</h3>
+<p>
+    A partir de la tabla anterior pasamos a realizar un calculo de costes en base a un número de autos comprados, en este caso con 6 vehículos obtenemos los siguientes datos
+</p>
+<br>
+<div class="card cards">
+    <div class="card border-info mb-3">
+    {{data4|safe}}
+</div>
+<h3>Tabla promedio de simulaciones hasta 10 vehículos</h3>
+<p>Realizamos el proceso anterior para diferentes cantidades de vehículos comprados y de igual forma calculamos el promedio de los datos obtenidos.</p>
+<br>
+<div class="card cards">
+    <div class="card border-info mb-3">
+    {{data5|safe}}
+</div>
+<h3>Tabla Ganancia por auto en la simulación</h3>
+<p>A partir de los datos obtenidos de las distintas simulaciones calculamos la ganancia que generaría cada vehículo Restando el promedio de alquiler menos el coste de estar ocioso y el coste de no estar disponible</p>
+<br>
+<div class="card cards">
+    <div class="card border-info mb-3">
+    {{data6|safe}}
+</div>
+<br>
+<h3>Gráfica ganancia</h3>
+<p>Finalmente visualizamos los datos obtenidos en una gráfica con la que podemos ver claramente la manera en la que se mueven los datos y dar como conclusión que el número óptimo de automóviles que debería comprar la empresa son 8.</p>
+<br>
+<div class="card my-3 border-info  w-100">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <img src="data:image/png;base64,{{image}}" class="img-fluid rounded-start" alt="grafica">
+        </div>
+    </div>
+</div>
+{% endblock %}
